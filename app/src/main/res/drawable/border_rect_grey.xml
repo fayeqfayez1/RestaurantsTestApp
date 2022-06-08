@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- view border color and width -->
+    <stroke
+        android:width="0.6dp"
+        android:color="@color/editTextBackground" >
+    </stroke>
+
+    <solid
+        android:color="@color/editTextBackground" />
+    <corners android:radius="10dp"/>
+
+</shape>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:textDirection="ltr"
+    tools:context=".features.MealDetails.view.MealDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginEnd="56dp"
+            app:expandedTitleMarginStart="40dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test_img_res" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@null"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/ib_back"
+                        android:layout_width="@dimen/toggleWidth"
+                        android:layout_height="@dimen/toggleWidth"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/layout_margin"
+                        android:layout_marginRight="@dimen/layout_margin"
+                        android:background="@drawable/circle_gray"
+                        app:srcCompat="@drawable/ic_back_black" />
+
+                    <ImageButton
+                        android:id="@+id/ib_share"
+                        android:layout_width="@dimen/toggleWidth"
+                        android:layout_height="@dimen/toggleWidth"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/fl_cart"
+
+                        android:background="@drawable/circle_gray"
+                        app:srcCompat="@drawable/ic_push" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/layout_margin"
+                        android:layout_toStartOf="@id/ib_favourite">
+
+                        <ImageButton
+                            android:id="@+id/ib_cart"
+                            android:layout_width="@dimen/toggleWidth"
+                            android:layout_height="@dimen/toggleWidth"
+                            android:background="@drawable/circle_gray"
+                            app:srcCompat="@drawable/ic_icon_cart" />
+
+                        <TextView
+                            android:id="@+id/tv_badge_number"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="top|right"
+                            android:layout_marginLeft="@dimen/marginBtwnViews"
+                            android:background="@drawable/red_circle_shape"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <ImageButton
+                        android:id="@+id/ib_favourite"
+                        android:layout_width="@dimen/toggleWidth"
+                        android:layout_height="@dimen/toggleWidth"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/layout_margin"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="@dimen/layout_margin"
+                        android:background="@drawable/circle_gray"
+                        app:srcCompat="@drawable/ic_star_gray" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/NormalTextViewStyle"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/avenirltstd_heavy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSizeExtraLarge"
+                        tools:text="@string/chicken_livers_peri_peri" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/layout_margin"
+                        android:fontFamily="@font/avenirltstd_heavy"
+                        android:gravity="center_vertical|end"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/textSizeNormal"
+                        tools:text="@string/priceFormat" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:fontFamily="@font/avenirltstd_medium"
+                    android:text="@string/title_description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/avenirltstd_book"
+                    android:textSize="@dimen/textSizeNormal"
+                    tools:text="@string/example_description" />
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:background="@color/grey_menu"
+                    android:fontFamily="@font/avenirltstd_heavy"
+                    android:padding="@dimen/padding"
+                    android:text="@string/size"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <LinearLayout
+                    android:id="@+id/all_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tv_toppings"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:background="@color/grey_menu"
+                    android:fontFamily="@font/avenirltstd_heavy"
+                    android:padding="@dimen/padding"
+                    android:text="@string/toppings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <LinearLayout
+                    android:id="@+id/all_toppings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tv_ingredient"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_marginBottom="@dimen/padding"
+                    android:background="@color/grey_menu"
+                    android:fontFamily="@font/avenirltstd_heavy"
+                    android:padding="@dimen/padding"
+                    android:text="@string/ingredient"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <TextView
+                    android:id="@+id/t_extra_ingredient"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/avenirltstd_book"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/attention_free_hint"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <LinearLayout
+                    android:id="@+id/all_ingredient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <EditText
+                    android:id="@+id/add_note"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/text_box_underline"
+                    android:fontFamily="@font/avenirltstd_medium"
+                    android:hint="@string/add_note"
+                    android:paddingBottom="@dimen/dot" />
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    style="@style/GradientButtonStyle"
+                    android:layout_margin="@dimen/margin_left_right"
+                    android:text="@string/add_to_order" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="@dimen/dot"
+        android:layout_height="@dimen/dot"
+        android:layout_margin="@dimen/smallPadding"
+        android:checked="false"
+        style="@style/ViewSelectorStyle" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/NormalTextViewStyle"
+        android:layout_weight="1"
+        android:fontFamily="@font/avenirltstd_medium"
+        android:text="@string/ex_ingredient" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        style="@style/NormalTextViewStyle"
+        android:gravity="end"
+        android:fontFamily="@font/avenirltstd_medium"
+        tools:text="$30" />
+</LinearLayout>

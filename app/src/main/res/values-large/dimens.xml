@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_dimen">160dp</dimen>
+    <dimen name="layout_margin">15dp</dimen>
+
+    <dimen name="marginTopFirst">30dp</dimen>
+    <dimen name="margin_left_right">35dp</dimen>
+    <dimen name="marginTopLogo">70dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="editTextPadding">20dp</dimen>
+    <dimen name="marginHorizontal">50dp</dimen>
+    <dimen name="marginBtwnViews">15dp</dimen>
+    <dimen name="user_icon_width">36dp</dimen>
+    <dimen name="user_icon_height">48dp</dimen>
+    <dimen name="textSizeLarge2">24sp</dimen>
+
+    <dimen name="mini_text">10sp</dimen>
+    <dimen name="miniTextSize">14sp</dimen>
+    <dimen name="textSizeSmall">16sp</dimen>
+    <dimen name="textSizeNormal">18sp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="textSizeLarge">24sp</dimen>
+    <dimen name="textSizeExtraLarge">28sp</dimen>
+    <dimen name="titleTextSize">24sp</dimen>
+
+
+    <dimen name="marginTopViews">30dp</dimen>
+    <dimen name="image_height">300dp</dimen>
+    <dimen name="bagde_height">80dp</dimen>
+    <dimen name="logoDimenSmall">130dp</dimen>
+    <dimen name="logoDimen">180dp</dimen>
+
+    <dimen name="CollapsingToolbarLayout">340dp</dimen>
+    <dimen name="iconSmallHeight">36dp</dimen>
+    <dimen name="toggleWidth">45dp</dimen>
+    <dimen name="toggleHeight">40dp</dimen>
+    <dimen name="smallPadding">8dp</dimen>
+    <dimen name="text_notification_size">18dp</dimen>
+
+
+    <dimen name="dim_toolbar_icon_size">28dp</dimen>
+    <dimen name="dim_toolbar_title_text_size">22dp</dimen>
+    <dimen name="dim_item_icon_employee_w_h">52dp</dimen>
+    <dimen name="dim_mini_text_size">14dp</dimen>
+    <dimen name="dim_item_icon_notification_w_h">38dp</dimen>
+    <dimen name="dim_dialog_alert_w_h">50dp</dimen>
+    <dimen name="dim_icon_plus_w_h">112dp</dimen>
+
+    <dimen name="navigation_width">320dp</dimen>
+    <dimen name="headerHeight">280dp</dimen>
+    <dimen name="margin_huge">85dp</dimen>
+    <dimen name="promotion_height">150dp</dimen>
+
+
+</resources>

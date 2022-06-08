@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/smallPadding"
+        android:paddingTop="@dimen/padding"
+        android:paddingEnd="@dimen/smallPadding"
+        android:paddingBottom="@dimen/padding">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/image_comment_width"
+                android:layout_height="@dimen/image_comment_width"
+                android:layout_centerInParent="true"
+                android:background="@drawable/border_rect_grey"
+                android:src="@drawable/sample2" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progress"
+                style="@style/AVLoadingIndicatorView"
+                android:layout_width="@dimen/iconMiniHeight"
+                android:layout_height="@dimen/iconMiniHeight"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/colorPrimary"
+                app:indicatorName="BallSpinFadeLoaderIndicator" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirltstd_medium"
+                    android:gravity="start|center_vertical"
+                    android:text="Crispy Chicken San"
+                    android:textSize="@dimen/textSizeNormal" />
+
+
+                <ImageView
+                    android:id="@+id/ivFav"
+                    android:layout_width="@dimen/iconMiniHeight"
+                    android:layout_height="@dimen/iconMiniHeight"
+                    android:gravity="center"
+                    android:minWidth="@dimen/image_comment_width"
+                    app:srcCompat="@drawable/ic_fav" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallPadding"
+                android:ellipsize="end"
+                android:fontFamily="@font/avenirltstd_book"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallPadding"
+                android:ellipsize="end"
+                android:fontFamily="@font/avenirltstd_book"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirltstd_heavy"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/smallPadding"
+                    android:text="@string/priceFormat"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenirltstd_heavy"
+                    android:gravity="end"
+                    android:paddingTop="@dimen/smallPadding"
+                    android:text="@string/quantityFormat"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textSizeNormal" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_rect_grey"
+                android:fontFamily="@font/avenirltstd_heavy"
+                android:gravity="center"
+                android:paddingTop="@dimen/smallPadding"
+                android:text="@string/add_to_order"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSizeNormal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginEnd="@dimen/padding"
+        android:background="@color/line" />
+</LinearLayout>

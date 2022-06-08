@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.menu.view.MenuActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:contentInsetEnd="?actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenirltstd_medium"
+            android:gravity="center"
+            android:text="@string/menu"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize" />
+
+        <FrameLayout
+            android:id="@+id/fl_cart"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/ib_cart"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:background="@android:color/transparent"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_shopping_black" />
+
+            <TextView
+                android:id="@+id/tvBadgeCar"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:layout_marginRight="@dimen/marginBtwnViews"
+                android:background="@drawable/red_circle_shape"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="visible" />
+
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edSearch"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dot"
+            android:layout_marginEnd="@dimen/dot"
+            android:background="@drawable/custom_ed_gray"
+            android:drawableStart="@drawable/ic_search_grey"
+            android:drawablePadding="@dimen/padding"
+            android:hint="@string/search_text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:textColor="@color/graySearch"
+            android:textSize="@dimen/textSizeNormal" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/editTextPadding"
+                android:layout_marginRight="@dimen/editTextPadding"
+                android:background="@drawable/top_border_rect_white_15"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_meal" />
+            </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
